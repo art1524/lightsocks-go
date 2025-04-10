@@ -1,3 +1,8 @@
+go build -o light-server cmd/lightsocks-server/main.go
+go build -o light-client cmd/lightsocks-local/main.go
+OS=android GOARCH=386  go build -o light-android-386 cmd/lightsocks-local/main.go
+OS=android GOARCH=arm64  go build -o light-android-arm cmd/lightsocks-local/main.go
+
 A ported and modified version of [Lightsocks](https://github.com/gwuhaolin/lightsocks), used as my own vpn solution to access the oversea network. Because it's not been widely used by many people, so the firewall may not notice its traffic pattern and hence it may not been blocked, at least now it works very well.
 
 The Android client: https://github.com/zhaohuabing/lightsocks-android
